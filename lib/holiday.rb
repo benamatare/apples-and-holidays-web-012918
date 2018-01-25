@@ -49,6 +49,7 @@ holiday_hash.each do |holiday, value|
     puts "holiday"
   end
 end
+end
 # holiday_hash = {
 #   :winter => {
 #     :christmas => ["Lights", "Wreath"],
