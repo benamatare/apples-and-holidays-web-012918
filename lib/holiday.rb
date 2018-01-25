@@ -29,7 +29,7 @@ def all_winter_holiday_supplies(holiday_hash)
 holiday_hash[:winter].each do |season|
   holder.push(holiday_hash[:winter][season])
 end
-holder
+holder_array
 end
 # holiday_hash = {
 #   :winter => {
