@@ -31,21 +31,11 @@ holder_array
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  # iterate through holiday_hash and print items such that your readout resembles:
-  # Winter:
-  #   Christmas: Lights, Wreath
-  #   New Years: Party Hats
-  # Summer:
-  #   Fourth Of July: Fireworks, BBQ
-  # etc.
-
-    holiday_hash.each do |season, holiday|
+  holiday_hash.each do |season, holiday|
       puts season.to_s.capitalize + ":"
       holiday.each do |day, supply|
         puts "  " + day.to_s.gsub(/[^0-9A-Za-z]/, " ").capitalize.split(/\s+/).each { |word| word.capitalize!}.join(' ') + ": " + supply.join(', ')
-
       end
-
     end
   end
 
@@ -56,13 +46,10 @@ def all_holidays_with_bbq(holiday_hash)
 
 holiday_hash.each do |season, holiday|
     holiday.each do |holiday, supplies|
-
       holder_array << holiday if supplies.include?('BBQ')
     end
-
   end
 holder_array
-
 end
 # holiday_hash = {
 #   :winter => {
